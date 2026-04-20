@@ -15,7 +15,7 @@ data and train & evaluate models, as well as the necessary data for training you
 
 Clone this repository or your fork thereof in the desired place:
 
-    git clone https://github.com/marpng/mt-exercise-03
+    git clone https://github.com/marcamsler1/mt-exercise-03
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
@@ -48,8 +48,8 @@ Open Ubuntu from your Start menu.
 
 Inside the Ubuntu terminal, follow the exact same steps as shown above for macOS/Linux:
 ```
-git clone https://github.com/marpng/mt-exercise-4
-cd mt-exercise-4
+git clone https://github.com/marcamsler1/mt-exercise-03
+cd mt-exercise-03
 ./scripts/make_virtualenv.sh
 ./scripts/download_install_packages.sh
 ./scripts/train.sh
