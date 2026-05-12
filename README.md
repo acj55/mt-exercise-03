@@ -1,4 +1,6 @@
 # MT Exercise 3: Layer Normalization for Transformer Models
+## Task 1: LayerNorm in JoeyNMT
+My notes on this tasks are included in the submitted pdf.
 
 ## Task 2: Implementing Pre- and Post-Normalisation
 ### Changes that I have made:
