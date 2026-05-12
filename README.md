@@ -4,7 +4,7 @@
 ### Changes that I have made:
 Changes made to the config files for the layer normalisation implementation:
 -	Duplicated configs/deen_transformer_regular.yaml twice
-    o	all the parameters and specifications remain the same as in the baseline, exscept for the changes below
+    -	all the parameters and specifications remain the same as in the baseline, exscept for the changes below
 -	Renamed them into 
     o	post_LN_deen_transformer.yaml 
     o	pre_LN_deen_transformer.yaml
