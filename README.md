@@ -25,6 +25,7 @@ For training:
 ### Validation Perplexity Analysis
 The validation perplexity scores are stored in the folder `ppl_data`. This contains the table, as well as the line plot. 
 I created the code `scripts/perplexity_analysis.py` to extract, store and visualise this data. 
+I discuss this in the submitted pdf. 
 
 ## Set up
 The set up remains the same as instructed by the assignment below. I used the specified venv for this exercise.
