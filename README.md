@@ -1,7 +1,22 @@
 # MT Exercise 3: Layer Normalization for Transformer Models
 
-This repo is a collection of scripts showing how to install [JoeyNMT](https://github.com/joeynmt/joeynmt), download
-data and train & evaluate models, as well as the necessary data for training your own model
+## Task 2: Implementing Pre- and Post-Normalisation
+### Changes that I have made:
+Changes made to the config files for the layer normalisation implementation:
+-	Duplicated configs/deen_transformer_regular.yaml twice
+    o	all the parameters and specifications remain the same as in the baseline, exscept for the changes below
+-	Renamed them into 
+    o	post_LN_deen_transformer.yaml 
+    o	pre_LN_deen_transformer.yaml
+-	Changed the name (l 1) and  the model directory path (l 58)
+    o	name: "post_LN"
+    o	name: "pre_LN"
+    o	model_dir: "models/post_LN"
+    o	model_dir: "models/pre_LN"
+-	added the layer_norm kwarg in the model specification, for both the encoder (l 85) and decoder (l 97)
+    o	layer_norm: "post"
+    o	layer_norm: "pre"
+
 
 # Requirements
 
