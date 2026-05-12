@@ -5,17 +5,25 @@
 Changes made to the config files for the layer normalisation implementation:
 -	Duplicated configs/deen_transformer_regular.yaml twice
     -	all the parameters and specifications remain the same as in the baseline, exscept for the changes below
--	Renamed them into 
-    o	post_LN_deen_transformer.yaml 
-    o	pre_LN_deen_transformer.yaml
+-	Renamed them into
+    -	post_LN_deen_transformer.yaml
+    -	pre_LN_deen_transformer.yaml
 -	Changed the name (l 1) and  the model directory path (l 58)
-    o	name: "post_LN"
-    o	name: "pre_LN"
-    o	model_dir: "models/post_LN"
-    o	model_dir: "models/pre_LN"
+    -	name: "post_LN"
+    -	name: "pre_LN"
+    -	model_dir: "models/post_LN"
+    -	model_dir: "models/pre_LN"
 -	added the layer_norm kwarg in the model specification, for both the encoder (l 85) and decoder (l 97)
-    o	layer_norm: "post"
-    o	layer_norm: "pre"
+    -	layer_norm: "post"
+    -	layer_norm: "pre"
+
+For training:
+- I added the names of the config files to `scripts/train.sh`.
+- I then trained the models with both normalisation specification, by letting the code run with the newly created model configurations.
+- This can be replicated by uncommenting the desired model configuration name in the adapted scripts.train.sh.
+
+### Validation Perplexity Analysis
+The validation perplexity scores can be fo
 
 
 # Requirements
