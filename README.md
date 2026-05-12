@@ -3,11 +3,11 @@
 ## Task 2: Implementing Pre- and Post-Normalisation
 ### Changes that I have made:
 Changes made to the config files for the layer normalisation implementation:
--	Duplicated configs/deen_transformer_regular.yaml twice
+-	Duplicated `configs/deen_transformer_regular.yaml` twice
     -	all the parameters and specifications remain the same as in the baseline, exscept for the changes below
 -	Renamed them into
-    -	post_LN_deen_transformer.yaml
-    -	pre_LN_deen_transformer.yaml
+    -	`post_LN_deen_transformer.yaml`
+    -	`pre_LN_deen_transformer.yaml`
 -	Changed the name (l 1) and  the model directory path (l 58)
     -	name: "post_LN"
     -	name: "pre_LN"
@@ -23,10 +23,13 @@ For training:
 - This can be replicated by uncommenting the desired model configuration name in the adapted scripts.train.sh.
 
 ### Validation Perplexity Analysis
-The validation perplexity scores can be fo
+The validation perplexity scores are stored in the folder `ppl_data`. This contains the table, as well as the line plot. 
+I created the code `scripts/perplexity_analysis.py` to extract, store and visualise this data. 
 
+## Set up
+The set up remains the same as instructed by the assignment below. I used the specified venv for this exercise.
 
-# Requirements
+### Requirements
 
 - This only works on a Unix-like system, with bash.
 - Python 3.10 must be installed on your system, i.e. the command `python3` must be available
@@ -34,7 +37,7 @@ The validation perplexity scores can be fo
 
     `pip install virtualenv`
 
-# Steps for macOS & Linux users
+### Steps for macOS & Linux users
 
 Clone this repository or your fork thereof in the desired place:
 
@@ -59,33 +62,4 @@ Train a model:
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved. It is also possible to continue training from there later on.
 
-# Steps for Windows users
 
-This repo relies on Bash scripts (.sh files), which do not run natively on Windows (CMD or PowerShell).  
-Here are two ways to make it work:
-
-Option 1: Use WSL (Windows Subsystem for Linux)
-Enable WSL and install Ubuntu: `wsl --install`
-
-Open Ubuntu from your Start menu.
-
-Inside the Ubuntu terminal, follow the exact same steps as shown above for macOS/Linux:
-```
-git clone https://github.com/marcamsler1/mt-exercise-03
-cd mt-exercise-03
-./scripts/make_virtualenv.sh
-./scripts/download_install_packages.sh
-./scripts/train.sh
-```     
-
-Option 2: Manually run steps without shell scripts
-If you can't use WSL, you can recreate the process manually using PowerShell or CMD
-Create and activate a virtual environment:
-```
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
-```
-Manually download and install Moses and other dependencies (you'll need to look inside scripts/download_install_packages.sh to replicate its steps).
-
-Run the training logic by manually executing the code inside train.sh, or porting it to a Python script or notebook.
